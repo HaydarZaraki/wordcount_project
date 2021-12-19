@@ -1,0 +1,20 @@
+Your Text : <br/>
+{{text}}
+<br/>
+<a href="{% url 'home'%}">Start Again</a>
+Word Count : <h3>{{count}}</h3>
+<br/>
+Most Used Words : 
+<br/>
+<table border="1">
+    <tr>
+        <td><strong>Word</strong></td>
+        <td><strong>Count</strong></td>
+    </tr>
+    {% for word,num in words_count %}
+    <tr>
+        <td>{{word}}</td>
+        <td>{{num}}</td>
+    </tr>
+    {% endfor %}
+</table>
